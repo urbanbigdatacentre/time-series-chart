@@ -10,9 +10,9 @@ Follow [this guide](***) to walkthrough the entire process from creating the rea
 
 
 ## Follow the Guide
-[Click here to follow the guide](...) that recreates this appplication step-by-step.
+[Click here to follow the guide](...) that recreates this application step-by-step.
 ## Live Demo
-
+[View the Live Demo on Github Pages](https://urbanbigdatacentre.github.io/time-series-chart/)
 
 
 
@@ -26,13 +26,13 @@ Follow [this guide](***) to walkthrough the entire process from creating the rea
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/urbanbigdatacentre/time-series-chart.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd time-series-chart
 ```
 
 Install dependencies
