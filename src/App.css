@@ -1,5 +1,15 @@
+body, * {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 .App {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    padding: 5%;
+  }
 }
 
 .App-logo {
