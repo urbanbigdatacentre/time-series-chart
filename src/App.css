@@ -1,3 +1,4 @@
+/* Set JetBrains Mono as the default app font using CSS */
 body, * {
   font-family: 'JetBrains Mono', monospace;
 }
@@ -8,7 +9,11 @@ body, * {
 
 @media only screen and (max-width: 600px) {
   .App {
-    padding: 5%;
+    padding: 2.5%;
+  }
+
+  #chart-container {
+    height: 55vh;
   }
 }
 

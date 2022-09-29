@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import DateFilter from "./components/date-filter";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import DateFilter from "./components/date-filter";
+import {useState} from "react";
 import {Box} from "@mui/material";
 import Chart from "./components/chart";
-import {useState} from "react";
 
+// Create Material UI theme to set JetBrains Mono as the default font family
 const theme = createTheme({
     typography: {
         allVariants: {
@@ -23,8 +24,10 @@ const theme = createTheme({
 });
 
 
+// Core App component feat. Date Filter component
 function App() {
 
+    // Object storing actual date selections inside App component
     const startingDates = {
         "7Days": JSON.stringify(new Date(new Date().setDate(new Date().getDate() - 7)).setHours(0, 0, 0, 0)),
         "30Days": JSON.stringify(new Date(new Date().setDate(new Date().getDate() - 30)).setHours(0, 0, 0, 0)),
@@ -33,7 +36,7 @@ function App() {
         "365Days": JSON.stringify(new Date(new Date().setDate(new Date().getDate() - 365)).setHours(0, 0, 0, 0))
     }
 
-    const [dateSelection, setDateSelection] = useState(startingDates["7Days"]);
+    const [dateSelection, setDateSelection] = useState(startingDates["365Days"]);
 
     return (
         <ThemeProvider theme={theme}>
@@ -41,12 +44,14 @@ function App() {
                 <Box sx={{display: `flex`, alignItems: `center`, justifyContent: `center`, height: `33vh`}}>
                     <DateFilter dateSelection={dateSelection} setDateSelection={setDateSelection} startingDates={startingDates}/>
                 </Box>
-                <Box sx={{display: `flex`, alignItems: `center`, justifyContent: `center`, height: `67vh`}}>
+                <Box id={'chart-container'} sx={{display: `flex`, alignItems: `center`, justifyContent: `center`, height: `67vh`}}>
                     <Chart dateSelection={dateSelection}/>
                 </Box>
             </div>
         </ThemeProvider>
     );
 }
+
+
 
 export default App;

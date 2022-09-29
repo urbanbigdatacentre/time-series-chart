@@ -5,12 +5,6 @@
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .chartAxis text{
-        font-size: 10px;
-    }
-}
-
 .chartGrid line {
     stroke: lightgrey;
     stroke-opacity: 0.7;
@@ -27,4 +21,10 @@
 
 .chartAxis path{
     stroke-opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .chartAxis text{
+        font-size: 10px;
+    }
 }
